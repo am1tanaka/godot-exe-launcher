@@ -43,6 +43,15 @@ func _exit_tree() -> void:
 	DataSystem.overwrite_all_game_info(all_info)
 
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("full_screen"):
+		if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+			DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, false)
+		else:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+
+
 func _open_editor() -> void:
 	add_button.disabled = true
 	setting_button.disabled = true

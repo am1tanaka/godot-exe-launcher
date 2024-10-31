@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Exe Launcher"
 run/main_scene="res://scenes/levels/main_level.tscn"
-config/features=PackedStringArray("4.3", "GL Compatibility")
+config/features=PackedStringArray("4.4", "GL Compatibility")
 run/max_fps=30
 boot_splash/bg_color=Color(0.1, 0.1, 0.1, 1)
 boot_splash/image="res://textures/boot_splash.png"
@@ -34,6 +34,14 @@ window/stretch/aspect="expand"
 
 theme/custom="res://resouces/themes/theme.tres"
 theme/custom_font="res://fonts/NOTOSANSJP-REGULAR.OTF"
+
+[input]
+
+full_screen={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194342,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
 
 [rendering]
 
